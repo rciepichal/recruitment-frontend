@@ -1,0 +1,29 @@
+@import "../../../variables";
+.main {
+  display: flex;
+  flex-flow: column;
+  &__headerWrapper {
+    display: flex;
+    justify-content: center;
+    .main__header {
+      font-weight: normal;
+      margin: 2rem;
+      position: relative;
+      display: inline-block;
+      &::after {
+        content: "";
+        top: 3.5rem;
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        width: 80%;
+        height: 0.1rem;
+        background-color: $fontWhite;
+      }
+    }
+  }
+  &__blocks {
+    display: flex;
+    padding: 1rem 0;
+  }
+}

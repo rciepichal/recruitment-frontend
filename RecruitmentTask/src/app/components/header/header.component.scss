@@ -6,6 +6,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: $black;
+  z-index: 1;
   &__logo {
     width: 3rem;
     height: 3rem;
