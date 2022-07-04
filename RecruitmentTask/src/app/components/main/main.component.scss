@@ -23,7 +23,8 @@
     }
   }
   &__blocks {
-    display: flex;
-    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
   }
 }

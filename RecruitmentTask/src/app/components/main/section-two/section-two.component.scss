@@ -1,0 +1,32 @@
+@import "../../../../variables";
+
+.block {
+  padding-right: 1.5rem;
+  &__title {
+    text-transform: uppercase;
+    text-align: end;
+    font-size: 1.2rem;
+    padding: 2rem 0;
+  }
+  &__buttons {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    padding: 0.5rem 0 0 0;
+    .button {
+      padding: 0.8rem 0.5rem;
+      margin: 0.5rem 0;
+      width: 8rem;
+      text-transform: uppercase;
+      background-color: $grey;
+      color: $fontWhite;
+      border: 1px $fontWhite solid;
+      border-radius: 0.3rem;
+      transition: all 0.3s linear;
+      &:hover {
+        background-color: #c8750b;
+        background-color: linear-gradient(90deg, #c8750b 0%, #fe9e23 100%);
+      }
+    }
+  }
+}

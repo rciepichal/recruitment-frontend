@@ -1,0 +1,15 @@
+.block {
+  padding: 0 1.5rem;
+  &__title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    padding: 2rem 0;
+  }
+  &__text {
+    text-align: center;
+    opacity: 0.5;
+    line-height: 120%;
+  }
+}
