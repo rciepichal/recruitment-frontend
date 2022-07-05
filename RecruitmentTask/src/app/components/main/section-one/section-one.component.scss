@@ -11,6 +11,26 @@
     flex-flow: column wrap;
     .radio {
       padding: 0.8rem 0;
+      &__label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+        input[type="radio"] {
+          opacity: 0;
+        }
+        .radio__design {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          outline-offset: 5px;
+          outline: 3px solid $fontWhite;
+          margin-right: 1rem;
+        }
+        input[type="radio"]:checked ~ .radio__design {
+          background: $fontWhite;
+        }
+      }
     }
   }
 }
