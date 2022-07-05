@@ -24,9 +24,46 @@
       border: 1px $fontWhite solid;
       border-radius: 3px;
       transition: all 0.3s linear;
+      font-weight: bold;
       &:hover {
         background-color: #c8750b;
         background-color: linear-gradient(90deg, #c8750b 0%, #fe9e23 100%);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .block {
+    &__buttons {
+      .button {
+        width: 12rem;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 960px) {
+  .block {
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    &__title {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    &__buttons {
+      flex-flow: row wrap;
+      max-width: 20rem;
+      justify-content: start;
+      .button {
+        width: 8rem;
+        &:nth-of-type(1) {
+          margin: 0 1rem 0 0;
+        }
+        &:nth-of-type(2) {
+          margin: 0 0 0 1rem;
+        }
       }
     }
   }

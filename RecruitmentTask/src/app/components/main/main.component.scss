@@ -25,6 +25,35 @@
   &__blocks {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    .section__one {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .section__two {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .section__three {
+      grid-area: 2 / 1 / 3 / 3;
+    }
+  }
+}
+@media only screen and (min-width: 960px) {
+  .main {
+    &__headerWrapper {
+      margin-bottom: 3rem;
+    }
+    &__blocks {
+      grid-template-columns: repeat(3, 33%);
+      grid-template-rows: 1fr;
+      .section__one {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      .section__two {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+      .section__three {
+        grid-area: 1 / 3 / 2 / 4;
+      }
+    }
   }
 }

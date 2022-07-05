@@ -27,10 +27,21 @@
           outline: 3px solid $fontWhite;
           margin-right: 1rem;
         }
+        .radio__text {
+          margin-left: 0.3rem;
+        }
         input[type="radio"]:checked ~ .radio__design {
           background: $fontWhite;
         }
       }
+    }
+  }
+}
+@media only screen and (min-width: 960px) {
+  .block {
+    &__title {
+      font-size: 1.5rem;
+      text-align: center;
     }
   }
 }

@@ -19,6 +19,7 @@
     padding: 0.5rem;
     margin: 1rem;
     position: relative;
+    opacity: 0.6;
     .css__border {
       position: absolute;
       top: 0;
@@ -29,6 +30,7 @@
       opacity: 0.5;
       transition: all 2s linear;
       z-index: 1;
+      user-select: none;
       &:hover {
         animation: circle 2s linear infinite;
       }
@@ -39,6 +41,9 @@
       letter-spacing: 2px;
       opacity: 0.5;
     }
+  }
+  &__special {
+    display: none;
   }
   &__dropdown {
     display: flex;
@@ -53,11 +58,12 @@
         padding: 0.5rem 0;
         width: 10rem;
         margin-right: 1.5rem;
-        border: 1px solid $fontWhite;
+        border: 1px solid #d1d2d368;
         border-radius: 3px;
         font-size: 1rem;
         display: flex;
         justify-content: center;
+        text-transform: uppercase;
         @include links;
         .dropdown__menu {
           display: none;
@@ -100,5 +106,43 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    &__special {
+      display: flex;
+      align-items: center;
+      opacity: 0.2;
+      position: relative;
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+
+        top: 50%;
+        width: 4rem;
+        height: 1px;
+        background-color: $fontWhite;
+      }
+      &::before {
+        left: -4.5rem;
+      }
+      &::after {
+        right: -4.5rem;
+      }
+    }
+    &__dropdown {
+      .dropdown__title {
+        width: 12rem;
+        .dropdown__menu {
+          width: 12rem;
+          .dropdown__option {
+            padding: 0.25rem 0.5rem;
+          }
+        }
+      }
+    }
   }
 }
