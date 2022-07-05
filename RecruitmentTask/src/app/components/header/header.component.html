@@ -7,5 +7,8 @@
         class="header__img"
     /></a>
   </div>
-  <p class="header__text">Zadanie <b>rekrutacyjne</b></p>
+  <div>
+    <p class="header__text">Zadanie <b>rekrutacyjne</b></p>
+    <p *ngIf="showName" class="header__user">Radosław Ciepichał</p>
+  </div>
 </header>

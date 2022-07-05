@@ -56,7 +56,7 @@
       position: relative;
       &__title {
         padding: 0.5rem 0;
-        width: 10rem;
+        width: 11rem;
         margin-right: 1.5rem;
         border: 1px solid #d1d2d368;
         border-radius: 3px;
@@ -65,12 +65,15 @@
         justify-content: center;
         text-transform: uppercase;
         @include links;
+        i {
+          margin-left: 10px;
+        }
         .dropdown__menu {
           display: none;
           position: absolute;
           top: -3.9rem;
           left: 0;
-          width: 10rem;
+          width: 11rem;
           background-color: $fontWhite;
           color: #000;
           border-radius: 3px 3px 0 0;
@@ -135,9 +138,9 @@
     }
     &__dropdown {
       .dropdown__title {
-        width: 12rem;
+        width: 13rem;
         .dropdown__menu {
-          width: 12rem;
+          width: 13rem;
           .dropdown__option {
             padding: 0.25rem 0.5rem;
           }

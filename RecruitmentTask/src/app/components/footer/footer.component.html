@@ -9,10 +9,15 @@
   <div class="footer__dropdown">
     <ul class="dropdown">
       <li class="dropdown__title">
-        <span>Pokaż</span>
+        <span>Pokaż<i class="fa-solid fa-chevron-up"></i></span>
         <ul class="dropdown__menu">
-          <li class="dropdown__option">> Zresetuj ustawienia</li>
-          <li class="dropdown__option">> Pokaż dane osobowe</li>
+          <li class="dropdown__option" (click)="onReset()">
+            <i class="fa-solid fa-chevron-right"></i>
+            Zresetuj ustawienia
+          </li>
+          <li class="dropdown__option" (click)="onClicked()">
+            <i class="fa-solid fa-chevron-right"></i> Pokaż dane osobowe
+          </li>
         </ul>
       </li>
     </ul>
