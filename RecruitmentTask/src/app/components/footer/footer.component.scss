@@ -1,0 +1,104 @@
+@import "../../../variables";
+
+@mixin links {
+  cursor: pointer;
+  user-select: none;
+}
+
+.footer {
+  margin-top: auto;
+  border-top: 2px solid #000;
+  background-color: $blackFooter;
+  display: flex;
+  height: 7rem;
+  justify-content: space-between;
+  z-index: 1;
+  &__css {
+    height: 5rem;
+    width: 5rem;
+    padding: 0.5rem;
+    margin: 1rem;
+    position: relative;
+    .css__border {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: 1px solid $fontWhite;
+      opacity: 0.5;
+      transition: all 2s linear;
+      z-index: 1;
+      &:hover {
+        animation: circle 2s linear infinite;
+      }
+    }
+    .css__text {
+      width: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.5;
+    }
+  }
+  &__dropdown {
+    display: flex;
+    align-items: center;
+    .dropdown {
+      list-style: none;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      &__title {
+        padding: 0.5rem 0;
+        width: 10rem;
+        margin-right: 1.5rem;
+        border: 1px solid $fontWhite;
+        border-radius: 3px;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        @include links;
+        .dropdown__menu {
+          display: none;
+          position: absolute;
+          top: -3.9rem;
+          left: 0;
+          width: 10rem;
+          background-color: $fontWhite;
+          color: #000;
+          border-radius: 3px 3px 0 0;
+          list-style: none;
+          padding: 0.5rem;
+          box-shadow: 0 0 20px 0 #000;
+          .dropdown__option {
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            padding: 0.25rem 0;
+            @include links;
+            transition: all 0.2s linear;
+            &:hover {
+              color: #c8750b;
+            }
+          }
+        }
+      }
+      &:hover {
+        .dropdown__title {
+          .dropdown__menu {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
