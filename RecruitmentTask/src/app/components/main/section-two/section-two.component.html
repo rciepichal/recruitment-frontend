@@ -1,7 +1,11 @@
 <div class="block">
   <h2 class="block__title">Blok drugi</h2>
   <div class="block__buttons">
-    <button type="button" class="button">Zastąp</button>
-    <button type="button" class="button">Doklej</button>
+    <button type="button" class="button" (click)="handleClick('replace')">
+      Zastąp
+    </button>
+    <button type="button" class="button" (click)="handleClick('paste')">
+      Doklej
+    </button>
   </div>
 </div>

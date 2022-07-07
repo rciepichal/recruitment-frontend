@@ -5,14 +5,21 @@
   </div>
   <section class="main__blocks">
     <div class="section__one">
-      <app-section-one></app-section-one>
+      <app-section-one (optionValue)="receivedOption($event)"></app-section-one>
     </div>
     <div class="section__two">
-      <app-section-two></app-section-two>
+      <app-section-two
+        [optionValue]="option"
+        (text)="textLog($event)"
+      ></app-section-two>
     </div>
     <div class="section__three">
-      <app-section-long-name></app-section-long-name>
+      <app-section-long-name [newContent]="newData"></app-section-long-name>
     </div>
   </section>
 </main>
-<app-footer (showName)="setShowName()" (clickReset)="setReset()"></app-footer>
+<app-footer
+  (showName)="setShowName()"
+  (clickReset)="setReset()"
+  class="footer"
+></app-footer>

@@ -9,6 +9,8 @@
           name="option"
           value="firstOption"
           class="radio__checkbox"
+          (change)="select(firstOption)"
+          #firstOption
         />
         <span class="radio__design"></span>
         <span class="radio__text">Opcja pierwsza</span>
@@ -22,6 +24,8 @@
           name="option"
           value="secondOption"
           class="radio__checkbox"
+          (change)="select(secondOption)"
+          #secondOption
         />
         <span class="radio__design"></span>
         <span class="radio__text">Opcja druga</span>
@@ -35,6 +39,8 @@
           name="option"
           value="randomOption"
           class="radio__checkbox"
+          (change)="select(randomOption)"
+          #randomOption
         />
         <span class="radio__design"></span>
         <span class="radio__text">Opcja losowa</span>
